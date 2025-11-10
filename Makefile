@@ -8,6 +8,9 @@ UNKNOWN_PRAGMAS=-Wno-unknown-pragmas
 all: bloom
 	$(CC) ./$(DISTDIR)/bloom.o ./$(TESTDIR)/bloom_test.c $(CCFLAGS) $(COMPFLAGS) $(UNKNOWN_PRAGMAS) -o ./$(DISTDIR)/blm
 
+benchmark: bloom
+	$(CC) ./$(DISTDIR)/bloom.o ./benchmarks/bloom_benchmark.c $(CCFLAGS) $(COMPFLAGS) $(UNKNOWN_PRAGMAS) -o ./$(DISTDIR)/bloom_benchmark
+
 # add openmp and keep unknown pragmas
 omp: COMPFLAGS += -fopenmp
 omp: UNKNOWN_PRAGMAS=
