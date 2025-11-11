@@ -13,7 +13,7 @@ enum {
     kMaxKeyLen = 32
 };
 
-static const float kTargetFalsePositive = 0.0001f; /* 0.01% */
+static const float kTargetFalsePositive = 0.000001f; /* 0.0001% */
 static const size_t kMemberBatches = 1u << 18;
 static const size_t kRandomTrials = 1u << 20;
 
